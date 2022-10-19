@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/' , [\App\Http\Controllers\ImageController::class , 'create']);
+Route::get('/' , [\App\Http\Controllers\ImageController::class , 'index']);
 
 Route::resource('images' , \App\Http\Controllers\ImageController::class);

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ImageRequest;
 use App\Models\Image;
 use Illuminate\Http\Request;
 
@@ -10,7 +11,9 @@ class ImageController extends Controller
 
     public function index()
     {
-        //
+        $images = Image::latest()->paginate(8);
+
+        return view('image.index' , compact('images'));
     }
 
     public function create()
@@ -19,9 +22,9 @@ class ImageController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(ImageRequest $request)
     {
-        //
+
     }
 
 
