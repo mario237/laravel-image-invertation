@@ -9,7 +9,7 @@ class ImageRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'chosen_image' => ['required' , 'image' , 'mimes:png,jpg,jpeg,svg' , 'max:5000']
+            'chosen_image' => ['required' , 'image']
         ];
     }
 

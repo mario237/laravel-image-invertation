@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ImageRequest;
 use App\Models\Image;
+use Exception;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image as InvertImage;
 
 class ImageController extends Controller
 {
@@ -22,6 +26,9 @@ class ImageController extends Controller
     }
 
 
+    /**
+     * @throws Exception
+     */
     public function store(ImageRequest $request)
     {
 
