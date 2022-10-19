@@ -10,7 +10,7 @@
 
         @foreach($images as $image)
 
-            <img src="{{ asset($image->path) }}" alt="" width="250" height="250">
+            <img class="m-5 img-fluid" src="{{ asset($image->path) }}" alt="">
 
         @endforeach
 
